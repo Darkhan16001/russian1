@@ -1,67 +1,64 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#eaf7ff">
-  <title>А. П. Чехов — 80 минут</title>
+  <title>А. П. Чехов — интерактивный урок</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="logo">✦</div>
-      <div>
-        <strong>РУССКАЯ ЛИТЕРАТУРА</strong>
-        <small>А. П. Чехов · Интерактивный урок</small>
-      </div>
+
+<header class="top">
+  <div class="brand">
+    <span>✦</span>
+    <div>
+      <b>РУССКАЯ ЛИТЕРАТУРА</b>
+      <small>А. П. Чехов · 80 минут</small>
     </div>
-
-    <div class="clocks">
-      <div>
-        <small>ТАЙМЕР УРОКА</small>
-        <b id="timer">00:00</b>
-      </div>
-      <div>
-        <small>ВРЕМЯ АЛМАТЫ</small>
-        <b id="clock">--:--:--</b>
-      </div>
-    </div>
-  </header>
-
-  <div class="workspace">
-
-    <aside class="sidebar">
-      <div class="side-label">УПРАВЛЕНИЕ</div>
-      <div id="counter" class="counter">01 / 01</div>
-
-      <div class="progress">
-        <div id="progressFill"></div>
-      </div>
-
-      <button class="primary" id="nextButton" onclick="nextSlide()">
-        Далее →
-      </button>
-      <button onclick="previousSlide()">← Назад</button>
-      <button onclick="goHome()">⌂ Главная</button>
-      <button onclick="toggleFullscreen()">⛶ Весь экран</button>
-      <button id="timerButton" onclick="toggleTimer()">▶ Таймер</button>
-      <button onclick="resetTimer()">↻ Сброс</button>
-
-      <div class="side-bottom">
-        <small>ТЕКУЩИЙ РАЗДЕЛ</small>
-        <b id="sectionName">Введение</b>
-        <p>BY DARKHAN</p>
-      </div>
-    </aside>
-
-    <main class="stage" id="stage">
-      <article class="screen" id="screen"></article>
-    </main>
-
   </div>
+
+  <div class="clockbar">
+    <div>
+      <small>ТАЙМЕР</small>
+      <b id="timer">00:00</b>
+    </div>
+    <div>
+      <small>АЛМАТЫ</small>
+      <b id="clock">--:--:--</b>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside>
+    <b class="sidehead">УПРАВЛЕНИЕ</b>
+    <b id="counter">01 / 01</b>
+
+    <div class="progress">
+      <div id="progressFill"></div>
+    </div>
+
+    <button class="primary" id="nextButton"
+            onclick="nextSlide()">Далее →</button>
+    <button onclick="previousSlide()">← Назад</button>
+    <button onclick="goHome()">⌂ Главная</button>
+    <button onclick="toggleFullscreen()">⛶ Весь экран</button>
+    <button id="timerButton" onclick="toggleTimer()">▶ Таймер</button>
+    <button onclick="resetTimer()">↻ Сброс</button>
+
+    <div class="bottom">
+      <small>РАЗДЕЛ</small>
+      <strong id="sectionName">Введение</strong>
+      <p>BY DARKHAN</p>
+    </div>
+  </aside>
+
+  <main id="stage">
+    <article id="screen"></article>
+  </main>
+</div>
+
 </body>
 </html>
