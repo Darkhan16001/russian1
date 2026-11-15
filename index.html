@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf7ff">
+  <title>А. П. Чехов — Жизнь и творчество</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-logo">✦</div>
+    <div>
+      <strong>РУССКАЯ ЛИТЕРАТУРА</strong>
+      <span>А. П. Чехов · Интерактивный урок</span>
+    </div>
+  </div>
+
+  <div class="clocks">
+    <div class="clock-box">
+      <small>ВРЕМЯ УРОКА</small>
+      <b id="timer">00:00</b>
+    </div>
+    <div class="clock-box">
+      <small>АЛМАТЫ · UTC+5</small>
+      <b id="clock">--:--:--</b>
+    </div>
+  </div>
+</header>
+
+<div class="workspace">
+
+  <aside class="sidebar">
+    <div class="side-label">УПРАВЛЕНИЕ</div>
+
+    <div id="counter" class="counter">01 / 01</div>
+
+    <div class="progress">
+      <div id="progressFill"></div>
+    </div>
+
+    <button
+      id="nextButton"
+      class="primary"
+      type="button"
+      onclick="nextSlide()">
+      Далее →
+    </button>
+
+    <button type="button" onclick="previousSlide()">
+      ← Назад
+    </button>
+
+    <button type="button" onclick="goHome()">
+      ⌂ Главная
+    </button>
+
+    <button type="button" onclick="toggleFullscreen()">
+      ⛶ Весь экран
+    </button>
+
+    <button
+      id="timerButton"
+      type="button"
+      onclick="toggleTimer()">
+      ▶ Таймер
+    </button>
+
+    <button type="button" onclick="resetTimer()">
+      ↻ Сброс
+    </button>
+
+    <div class="side-bottom">
+      <small>РАЗДЕЛ УРОКА</small>
+      <b id="sectionName">Введение</b>
+      <p>BY DARKHAN</p>
+    </div>
+  </aside>
+
+  <main id="stage" class="stage">
+    <article id="screen" class="screen"></article>
+  </main>
+
+</div>
+
+</body>
+</html>
